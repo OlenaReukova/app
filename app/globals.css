@@ -30,7 +30,7 @@ body,
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
-    --focus-border: #37ab87; /* Define focus border color */
+    --focus-border: #37ab87;
   }
 
   .dark {
@@ -64,29 +64,28 @@ body,
   }
 
   .ql-container {
-    font-size: 16px; /* Avoid !important if possible */
+    font-size: 16px;
   }
 
   .ag-theme-alpine .ag-header {
-    background-color: rgb(241, 250, 254); /* Header background color */
+    background-color: rgb(241, 250, 254);
   }
 
   .ag-theme-alpine .ag-header-cell {
-    color: rgb(3, 105, 161); /* Header text color */
-    font-weight: bold; /* Optional: Make header text bold */
+    color: rgb(3, 105, 161);
+    font-weight: bold;
   }
 
   .ag-theme-alpine .ag-cell {
-    color: rgb(3, 105, 161); /* Cell text color */
+    color: rgb(3, 105, 161);
   }
 
-  /* Focus styling for input fields */
   input:focus,
   textarea:focus,
   select:focus {
     border-color: var(--focus-border);
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 0 2px rgba(55, 171, 135, 0.5); /* Optional: add a shadow for better visibility */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(55, 171, 135, 0.5);
   }
 }
 
