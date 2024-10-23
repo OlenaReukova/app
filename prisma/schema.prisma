@@ -1,0 +1,42 @@
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+model User {
+  id        String @id @default(uuid())
+  firstName String @db.Text
+  lastName  String @db.Text
+  email     String @unique
+  password  String
+  role      Role   @relation(fields: [roleId], references: [id])
+  roleId    String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([roleId])
+}
+
+model Role {
+  id     String  @id @default(uuid())
+  title  String
+  status Boolean
+  user   User[]
+}
+
+
+model Company {
+  id            Int      @id @default(autoincrement())
+  companyName   String   @unique
+  companyAddress String
+  contactPerson String
+  contactEmail  String   @unique
+  status        String   @default("pending")
+}
