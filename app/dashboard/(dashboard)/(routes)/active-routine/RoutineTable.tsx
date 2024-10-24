@@ -32,11 +32,41 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ routines, userId }) => {
       body: JSON.stringify({ active: newActiveState, userId }),
     });
 
-    // await fetch('/api/send-sms', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ userId, routineId: id, active: newActiveState }),
-    // });
+    if (newActiveState) {
+      try {
+        const response = await fetch(`/api/get-phone/${userId}`);
+        if (!response.ok) {
+          const data = await response.json();
+          throw new Error(data.error || 'Failed to fetch phone number');
+        }
+
+        const data = await response.json();
+        const phoneNumber = data.phoneNumber;
+        const routine = routines.find((routine) => routine.id === id);
+        const activity = routine ? routine.activity : '';
+
+        if (phoneNumber && activity) {
+          const smsResponse = await fetch(`/api/send-sms/${id}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              phoneNumber: phoneNumber,
+              userId,
+              activity,
+            }),
+          });
+
+          if (!smsResponse.ok) {
+            const smsData = await smsResponse.json();
+            throw new Error(smsData.error || 'Failed to send SMS');
+          }
+        } else {
+          console.error('No phone number found for the user.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
 
     setActiveStates((prev) => ({ ...prev, [id]: newActiveState }));
   };
