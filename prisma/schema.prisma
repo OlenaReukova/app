@@ -22,4 +22,5 @@ model Routine {
   time      String
   frequency String
   userId    String
+  active    Boolean  @default(false) 
 }
