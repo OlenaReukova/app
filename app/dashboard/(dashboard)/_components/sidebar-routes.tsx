@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   BarChart,
@@ -6,28 +6,24 @@ import {
   Layout,
   List,
   UserCog,
-  Building2,
+  SquarePlus,
   ShieldQuestion,
-} from "lucide-react";
-import { usePathname } from "next/navigation";
+} from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
-import { SidebarItem } from "./sidebar-item";
+import { SidebarItem } from './sidebar-item';
 
 const routes = [
   {
-    icon: Building2,
-    label: "Dashboard",
-    href: "/dashboard/dashboard",
+    icon: SquarePlus,
+    label: 'Add New Routine',
+    href: '/dashboard/add-routine',
   },
 ];
 
 export const SidebarRoutes = () => {
-  const pathname = usePathname();
-
-  const isAdminPage = pathname?.includes("/dashboard/admin");
-
   return (
-    <div className="flex flex-col w-full">
+    <div className='flex flex-col w-full'>
       {routes.map((route) => (
         <SidebarItem
           key={route.href}
