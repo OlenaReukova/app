@@ -5,15 +5,15 @@ import { Linkedin, Twitter, Instagram } from 'lucide-react';
 const Footer = () => {
   const socialLinks = [
     {
-      icon: <Linkedin className='text-white' />,
+      icon: <Linkedin className='text-black' />,
       link: '',
     },
     {
-      icon: <Twitter className='text-white' />,
+      icon: <Twitter className='text-black' />,
       link: '',
     },
     {
-      icon: <Instagram className='text-white' />,
+      icon: <Instagram className='text-black' />,
       link: '',
     },
   ];
@@ -30,7 +30,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className='bg-[#132a0c;] text-white py-10'>
+    <footer className='bg-[#f9fbfc;] text-white py-10'>
       <div className='max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center'>
         <div className='flex flex-col items-center md:items-start mb-6 md:mb-0'></div>
         <div className='flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mb-6 md:mb-0'>
@@ -41,14 +41,14 @@ const Footer = () => {
                 href={item.path}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='font-medium hover:text-gray-400'>
+                className='font-medium text-black hover:text-gray-400'>
                 {item.title}
               </a>
             ) : (
               <Link
                 key={idx}
                 href={item.path}
-                className='font-medium hover:text-gray-400'>
+                className='font-medium text-black hover:text-gray-400'>
                 {item.title}
               </Link>
             )
@@ -61,7 +61,7 @@ const Footer = () => {
               href={social.link}
               target='_blank'
               rel='noopener noreferrer'
-              className='text-gray-400 hover:text-gray-300'>
+              className='text-black hover:text-gray-300'>
               {social.icon}
             </a>
           ))}

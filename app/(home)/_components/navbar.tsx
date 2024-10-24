@@ -43,18 +43,23 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`sticky top-${top} bg-white z-10 w-full border-b md:border-0`}
+      className={`sticky top-${top} bg-white z-50 w-full border-b md:border-0`}
       style={{ transition: 'top ease-in-out 0.3s' }}>
       <div className='items-center px-4 max-w-screen-2xl mx-auto md:flex md:px-8'>
-        {/* Logo */}
-        <div className='flex items-center justify-between py-3 md:py-5 md:block'>
+        {/* Logo and RoutineMate Text */}
+        <div className='flex items-center justify-between py-3 md:py-5'>
           <Link href='/'>
-            <Image
-              src='/assets/logo.png'
-              width={50}
-              height={50}
-              alt='Branding logo'
-            />
+            <div className='flex items-center space-x-2'>
+              <Image
+                src='/assets/logo.png'
+                width={50}
+                height={50}
+                alt='Branding logo'
+              />
+              <span className='text-lg font-bold text-gray-900'>
+                RoutineMate
+              </span>
+            </div>
           </Link>
           <div className='md:hidden'>
             <button
@@ -79,7 +84,7 @@ const NavBar = () => {
           <div className='flex gap-3 items-center'>
             {!userId ? (
               <Button
-                variant='success'
+                variant='default'
                 border='rounded'
                 size='lg'
                 onClick={clickHandler}>
@@ -87,15 +92,17 @@ const NavBar = () => {
               </Button>
             ) : (
               <Link href='/dashboard'>
-                <Button variant='success' border='rounded' size='lg'>
+                <Button variant='default' border='rounded' size='lg'>
                   Dashboard
                 </Button>
               </Link>
             )}
           </div>
         </div>
+
+        {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-white z-20 p-8 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${
+          className={`fixed  inset-0 bg-white z-20 p-8 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${
             state ? 'translate-x-0' : 'translate-x-full'
           } md:hidden`}>
           <button
@@ -118,7 +125,7 @@ const NavBar = () => {
           <div className='mt-8 flex justify-center'>
             {!userId ? (
               <Button
-                variant='success'
+                variant='default'
                 border='rounded'
                 size='lg'
                 onClick={clickHandler}>
