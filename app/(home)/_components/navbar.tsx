@@ -46,7 +46,6 @@ const NavBar = () => {
       className={`sticky top-${top} bg-white z-50 w-full border-b md:border-0`}
       style={{ transition: 'top ease-in-out 0.3s' }}>
       <div className='items-center px-4 max-w-screen-2xl mx-auto md:flex md:px-8'>
-        {/* Logo and RoutineMate Text */}
         <div className='flex items-center justify-between py-3 md:py-5'>
           <Link href='/'>
             <div className='flex items-center space-x-2'>
@@ -70,10 +69,9 @@ const NavBar = () => {
           </div>
         </div>
 
-        {/* Desktop menu */}
-        <div
+        {/* <div
           className={`hidden md:flex flex-1 justify-end items-center space-x-10`}>
-          {/* Nav Links */}
+         
           <ul className='flex space-x-10'>
             {menus.map((item, idx) => (
               <li key={idx} className='font-medium text-black'>
@@ -98,7 +96,7 @@ const NavBar = () => {
               </Link>
             )}
           </div>
-        </div>
+        </div> */}
 
         {/* Mobile Menu */}
         <div

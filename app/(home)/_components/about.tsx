@@ -2,8 +2,8 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section className='py-16 px-6 bg-white'>
-      <div className='container mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between max-w-6xl'>
+    <section className='py-8 bg-white'>
+      <div className='container mx-auto flex flex-col md:flex-row items-center justify-center'>
         <div className='flex flex-col items-start text-left w-full md:w-1/2'>
           {/* <h3 className='text-sm font-semibold mb-2 text-[#1272A4]'>
             BUILD BETTER ROUTINES WITH ROUTINEMATE
@@ -31,11 +31,10 @@ const About: React.FC = () => {
           <a
             href='/contact'
             className='text-black hover:text-[#1272A4] transition-colors duration-300 ease-in-out text-lg font-semibold'>
-            Get in touch ->   
+            Get in touch -{'>'}
           </a>
         </div>
-
-        <div className='w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0'>
+        <div className='w-full md:w-1/2 flex justify-center mt-8 md:mt-0'>
           <img
             src='/assets/homepage2.jpg'
             alt='homepage image'
