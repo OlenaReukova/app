@@ -42,7 +42,6 @@ const Services = () => {
     const fetchServices = async () => {
       setIsLoading(true);
       try {
-        // mock fetching service data
         const serviceData = [
           {
             id: '1',
@@ -102,7 +101,7 @@ const Services = () => {
               title={service.title}
               imageUrl={service.imageUrl}
               description={service.description}
-              buttonText={service.buttonText} // Pass buttonText for each card
+              buttonText={service.buttonText}
             />
           ))}
         </div>

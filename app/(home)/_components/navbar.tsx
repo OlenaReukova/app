@@ -133,7 +133,7 @@ const NavBar = () => {
               </Button>
             ) : (
               <Link href='/dashboard'>
-                <Button variant='success' border='rounded' size='lg'>
+                <Button variant='default' border='rounded' size='lg'>
                   Dashboard
                 </Button>
               </Link>
