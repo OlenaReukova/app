@@ -18,7 +18,7 @@ export default function Dashboard() {
   >(undefined);
   const form = useForm<PhoneNumberFormValues>({
     defaultValues: {
-      phoneNumber: initialPhoneNumber || '',
+      phoneNumber: '',
     },
   });
 
@@ -35,13 +35,14 @@ export default function Dashboard() {
           throw new Error(data.error || 'Failed to fetch phone number');
         }
         setInitialPhoneNumber(data.phoneNumber);
+        form.reset({ phoneNumber: data.phoneNumber });
       } catch (error) {
         console.error('Error fetching phone number:', error);
       }
     };
 
     fetchPhoneNumber();
-  }, [userId]);
+  }, [userId, form]);
 
   const onSubmitPhoneNumber: SubmitHandler<PhoneNumberFormValues> = async (
     data
@@ -68,6 +69,10 @@ export default function Dashboard() {
       setIsSubmitting(false);
     }
   };
+
+  const phoneNumber = form.watch('phoneNumber');
+
+  const isSubmitDisabled = phoneNumber === initialPhoneNumber;
 
   return (
     <div className='max-w-lg mx-auto p-8'>
@@ -103,7 +108,7 @@ export default function Dashboard() {
         <Button
           type='submit'
           variant='default'
-          disabled={isSubmitting}
+          disabled={isSubmitting || isSubmitDisabled}
           className='w-full mt-4'>
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </Button>

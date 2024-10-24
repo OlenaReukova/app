@@ -1,19 +1,15 @@
 'use client';
 
-import {
-  BarChart,
-  Compass,
-  Layout,
-  List,
-  UserCog,
-  SquarePlus,
-  ShieldQuestion,
-} from 'lucide-react';
-import { usePathname } from 'next/navigation';
+import { SquarePlus, ShieldCheck } from 'lucide-react';
 
 import { SidebarItem } from './sidebar-item';
 
 const routes = [
+  {
+    icon: ShieldCheck,
+    label: 'My Routines',
+    href: '/dashboard/active-routine',
+  },
   {
     icon: SquarePlus,
     label: 'Add New Routine',
