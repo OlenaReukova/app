@@ -5,9 +5,9 @@ const About: React.FC = () => {
     <section className='py-16 px-6 bg-white'>
       <div className='container mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between max-w-6xl'>
         <div className='flex flex-col items-start text-left w-full md:w-1/2'>
-          <h3 className='text-sm text-green-600 font-semibold mb-2'>
+          {/* <h3 className='text-sm font-semibold mb-2 text-[#1272A4]'>
             BUILD BETTER ROUTINES WITH ROUTINEMATE
-          </h3>
+          </h3> */}
           <h2 className='text-3xl md:text-4xl font-extrabold mb-6 text-gray-900 leading-tight'>
             At RoutineMate, we empower individuals to take control of their
             time, productivity, and wellness.
@@ -30,15 +30,15 @@ const About: React.FC = () => {
           </p>
           <a
             href='/contact'
-            className='text-green-600 hover:text-green-800 transition-colors duration-300 ease-in-out text-lg font-semibold'>
-            Get in touch
+            className='text-black hover:text-[#1272A4] transition-colors duration-300 ease-in-out text-lg font-semibold'>
+            Get in touch ->   
           </a>
         </div>
 
         <div className='w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0'>
           <img
             src='/assets/homepage2.jpg'
-            alt='Company Building'
+            alt='homepage image'
             className='w-full h-auto md:w-96'
           />
         </div>

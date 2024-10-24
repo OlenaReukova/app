@@ -1,5 +1,4 @@
 'use client';
-
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -9,6 +8,7 @@ interface ServiceCardProps {
   title: string;
   imageUrl: string;
   description: string;
+  buttonText: string;
 }
 
 const ServiceCard = ({
@@ -16,16 +16,17 @@ const ServiceCard = ({
   title,
   imageUrl,
   description,
+  buttonText,
 }: ServiceCardProps) => {
   return (
     <div className='bg-gray-100 shadow-lg overflow-hidden transition-transform transform'>
       <img src={imageUrl} alt={title} className='w-full h-48 object-cover' />
       <div className='p-8 flex flex-col items-center'>
-        <h3 className='text-sm text-green-600 font-semibold mb-2'>{title}</h3>
+        <h3 className='text-sm text-[#1272A4] font-semibold mb-2'>{title}</h3>
         <p className='text-lg text-gray-600 text-center mb-4'>{description}</p>
         <Link href={`/services/${id}`}>
-          <Button variant='success' size='lg'>
-            Learn More
+          <Button variant='default' size='lg'>
+            {buttonText}
           </Button>
         </Link>
       </div>
@@ -49,6 +50,7 @@ const Services = () => {
             imageUrl: '/assets/card1.jpg',
             description:
               'Unlock your potential with personalized daily routine planning. ',
+            buttonText: 'Planning',
           },
           {
             id: '2',
@@ -56,6 +58,7 @@ const Services = () => {
             imageUrl: '/assets/card2.jpg',
             description:
               'Stay accountable and motivated with RoutineMate’s routine tracking feature.',
+            buttonText: 'Tracking',
           },
           {
             id: '3',
@@ -63,6 +66,7 @@ const Services = () => {
             imageUrl: '/assets/card3.jpg',
             description:
               'Prioritize your well-being with RoutineMate’s wellness support feature.',
+            buttonText: 'Support',
           },
         ];
         setServices(serviceData);
@@ -84,9 +88,6 @@ const Services = () => {
     <div className='bg-[#f5f5f5] py-16'>
       <div className='container mx-auto'>
         <div className='text-left mb-10'>
-          <h3 className='text-sm text-green-600 font-semibold mb-2'>
-            BUILD BETTER ROUTINES WITH ROUTINEMATE
-          </h3>
           <h2 className='text-3xl md:text-4xl font-extrabold mb-6 text-gray-900 leading-tight'>
             Discover how we can help you achieve more with our tailored
             solutions.
@@ -101,6 +102,7 @@ const Services = () => {
               title={service.title}
               imageUrl={service.imageUrl}
               description={service.description}
+              buttonText={service.buttonText} // Pass buttonText for each card
             />
           ))}
         </div>
