@@ -45,7 +45,7 @@ const Services = () => {
         const serviceData = [
           {
             id: '1',
-            title: 'PERSONALIZED DAILY ROUTINE PLANNING',
+            title: 'PERSONALISED DAILY ROUTINE PLANNING',
             imageUrl: '/assets/card1.jpg',
             description:
               'Unlock your potential with personalized daily routine planning. ',
