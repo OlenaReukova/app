@@ -48,7 +48,7 @@ const Services = () => {
             title: 'PERSONALISED DAILY ROUTINE PLANNING',
             imageUrl: '/assets/card1.jpg',
             description:
-              'Unlock your potential with personalized daily routine planning. ',
+              'Unlock your potential with personalised daily routine planning. ',
             buttonText: 'Planning',
           },
           {
@@ -64,7 +64,7 @@ const Services = () => {
             title: 'WELLNESS SUPPORT',
             imageUrl: '/assets/card3.jpg',
             description:
-              'Prioritize your well-being with RoutineMate’s wellness support feature.',
+              'Prioritise your well-being with RoutineMate’s wellness support feature.',
             buttonText: 'Support',
           },
         ];
