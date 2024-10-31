@@ -63,6 +63,8 @@ The app provides several key features:
 
 
 
-***Built by***
+***Built by*** 
+- [Olena](https://github.com/OlenaReukova) 
+- [Farzaneh](https://github.com/farzaneh-haghani) 
 
-https://docs.google.com/presentation/d/10c3bL-FdKEdrmS7AWcjj6go80NuPdyCD-OUfyPm7qEc/edit?usp=sharing
+[Presentaion](https://docs.google.com/presentation/d/10c3bL-FdKEdrmS7AWcjj6go80NuPdyCD-OUfyPm7qEc/edit?usp=sharing)
