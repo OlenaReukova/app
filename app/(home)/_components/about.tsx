@@ -13,7 +13,7 @@ const About: React.FC = () => {
             time, productivity, and wellness.
           </h2>
           <p className='text-lg text-gray-700 mb-4'>
-            With RoutineMate, you can plan personalized daily routines, receive
+            With RoutineMate, you can plan personalised daily routines, receive
             timely reminders, and track your progress — all in one place. Our
             goal is to provide a tool that not only helps you manage your day
             but also improves your overall well-being.
@@ -21,7 +21,7 @@ const About: React.FC = () => {
           <p className='text-lg text-gray-700 mb-4'>
             We understand that consistency is key to success. That's why we've
             created an app that helps you form sustainable habits, optimize your
-            productivity, and prioritize your health through regular reminders
+            productivity, and prioritise your health through regular reminders
             for tasks, exercise, sleep, and medication.
           </p>
           <p className='text-lg text-gray-700 mb-6'>
