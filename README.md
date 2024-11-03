@@ -40,7 +40,7 @@ The app provides several key features:
 - **TypeScript**: Ensures type safety and code reliability
 - **Prisma**: For database management.
 - **Twilio SMS API**: For SMS reminders
-- **NextAuth**: For secure authentication.
+- **Clerk Auth**: For secure authentication. [visit Clerk website](https://clerk.com/)
 - **shadcn/ui**: Designed component library for frontend.
 
 ## Challenges and Future Plans
